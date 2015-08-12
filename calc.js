@@ -15,28 +15,33 @@ var firstNum = parseFloat(prompt("What is your first number?"));
 console.log(firstNum);
 var op = prompt("What is your calculation? a = add, s = subtract, m = multiply, d = divide, q = square root, w = power");
 console.log(op);
-var secondNum = parseFloat(prompt("What is your second number?"));
-console.log(secondNum);
+if (op !== "q" && op !== "w") {
+  var secondNum = parseFloat(prompt("What is your second number?"));
+  console.log(secondNum);
+}
 
-
-if (isNaN(firstNum) = true || isNaN(secondNum) = true) {
+if (isNaN(firstNum) === true || isNaN(secondNum) === true) {
   alert("One of your numbers was not actually a number.  Try again, yeah?");
 } else if (op === 'a') {
-  var result = goodFirstNum + goodSecondNum;
+  var result = firstNum + secondNum;
+  console.log(result);
 } else if (op === 's') {
-  var result = goodFirstNum - goodSecondNum;
+  var result = firstNum - secondNum;
+  console.log(result);
 } else if (op === 'm') {
-  var result = goodFirstNum * goodSecondNum;
+  var result = firstNum * secondNum;
+  console.log(result);
 } else if (op === 'd') {
-  var result = goodFirstNum / goodSecondNum;
+  var result = firstNum / secondNum;
+  console.log(result);
 // } else if (op === 'q') {
 //   var result = goodFirstNum + goodSecondNum;
 // } else if (op === 'w') {
 //   var result = goodFirstNum + goodSecondNum;
-
 } else {
   alert("You asked for an operator that I did not offer you.  WTF?")
 }
+
 
 
 
