@@ -24,25 +24,40 @@ if (isNaN(firstNum) === true || ((isNaN(secondNum) === true && op !== "q"))) {
   alert("One of your numbers was not actually a number.  Try again, yeah?");
 } else if (op === 'a') {
   var result = firstNum + secondNum;
+  alert(firstNum + " + " + secondNum + " = " + result);
   console.log(result);
 } else if (op === 's') {
   var result = firstNum - secondNum;
+  alert(firstNum + " - " + secondNum + " = " + result);
   console.log(result);
 } else if (op === 'm') {
   var result = firstNum * secondNum;
+  alert(firstNum + " x " + secondNum + " = " + result);
   console.log(result);
 } else if (op === 'd') {
   var result = firstNum / secondNum;
+  alert(firstNum + " / " + secondNum + " = " + result);
   console.log(result);
 } else if (op === 'q') {
   var result = Math.sqrt(firstNum);
+  alert("The square root of " + firstNum + " is " + result);
   console.log(result);
 } else if (op === 'w') {
   var result = Math.pow(firstNum, secondNum);
+  alert(firstNum + " to the power of " + secondNum + " is " + result);
   console.log(result);
 } else {
   alert("You asked for an operator that I did not offer you.  WTF?")
 }
+
+
+
+
+
+
+
+
+
 
 
 
