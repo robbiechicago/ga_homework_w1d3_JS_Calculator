@@ -11,17 +11,15 @@
 //parseFloat or parseInt to convert to number with integers.
 //
 
-var firstNum = prompt("What is your first number?");
+var firstNum = parseFloat(prompt("What is your first number?"));
 console.log(firstNum);
 var op = prompt("What is your calculation? a = add, s = subtract, m = multiply, d = divide, q = square root, w = power");
 console.log(op);
-var secondNum = prompt("What is your second number?");
+var secondNum = parseFloat(prompt("What is your second number?"));
 console.log(secondNum);
 
-goodFirstNum = parseFloat(firstNum);
-goodSecondNum = parseFloat(secondNum);
 
-if (typeof(goodFirstNum) != "number" || typeof(goodFirstNum) != "number") {
+if (isNaN(firstNum) = true || isNaN(secondNum) = true) {
   alert("One of your numbers was not actually a number.  Try again, yeah?");
 } else if (op === 'a') {
   var result = goodFirstNum + goodSecondNum;
