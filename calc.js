@@ -15,12 +15,12 @@ var firstNum = parseFloat(prompt("What is your first number?"));
 console.log(firstNum);
 var op = prompt("What is your calculation? a = add, s = subtract, m = multiply, d = divide, q = square root, w = power");
 console.log(op);
-if (op !== "q" && op !== "w") {
+if (op !== "q") {
   var secondNum = parseFloat(prompt("What is your second number?"));
   console.log(secondNum);
 }
 
-if (isNaN(firstNum) === true || (isNaN(secondNum) === true && (op !== "q" && op !== "w"))) {
+if (isNaN(firstNum) === true || ((isNaN(secondNum) === true && op !== "q"))) {
   alert("One of your numbers was not actually a number.  Try again, yeah?");
 } else if (op === 'a') {
   var result = firstNum + secondNum;
@@ -38,7 +38,7 @@ if (isNaN(firstNum) === true || (isNaN(secondNum) === true && (op !== "q" && op 
   var result = Math.sqrt(firstNum);
   console.log(result);
 } else if (op === 'w') {
-  var result = Math.pow(firstNum);
+  var result = Math.pow(firstNum, secondNum);
   console.log(result);
 } else {
   alert("You asked for an operator that I did not offer you.  WTF?")
