@@ -20,7 +20,7 @@ if (op !== "q" && op !== "w") {
   console.log(secondNum);
 }
 
-if (isNaN(firstNum) === true || isNaN(secondNum) === true) {
+if (isNaN(firstNum) === true || (isNaN(secondNum) === true && (op !== "q" && op !== "w"))) {
   alert("One of your numbers was not actually a number.  Try again, yeah?");
 } else if (op === 'a') {
   var result = firstNum + secondNum;
@@ -34,10 +34,12 @@ if (isNaN(firstNum) === true || isNaN(secondNum) === true) {
 } else if (op === 'd') {
   var result = firstNum / secondNum;
   console.log(result);
-// } else if (op === 'q') {
-//   var result = goodFirstNum + goodSecondNum;
-// } else if (op === 'w') {
-//   var result = goodFirstNum + goodSecondNum;
+} else if (op === 'q') {
+  var result = Math.sqrt(firstNum);
+  console.log(result);
+} else if (op === 'w') {
+  var result = Math.pow(firstNum);
+  console.log(result);
 } else {
   alert("You asked for an operator that I did not offer you.  WTF?")
 }
